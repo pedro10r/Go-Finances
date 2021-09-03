@@ -24,7 +24,7 @@ export const Amount = styled.Text<TransactionProps>`
   font-size: ${RFValue(20)}px;
 
   color: ${({ theme, type }) =>
-    type === 'positive' ? theme.colors.success : theme.colors.atentetion
+    type === 'positive' ? theme.colors.success : theme.colors.attention
   };
 
   margin-top: 2px;
