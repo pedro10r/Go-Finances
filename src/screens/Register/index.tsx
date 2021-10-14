@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Modal,
   TouchableWithoutFeedback,
@@ -126,6 +126,15 @@ export function Register() {
       Alert.alert('Não foi possível salvar');
     }
   }
+
+  // useEffect(() => {
+  //   async function removeAll() {
+  //     const dataKey = '@gofinances:transactions';
+  //     await AsyncStorage.removeItem(dataKey);
+  //   }
+
+  //   removeAll();
+  // }, [])
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
