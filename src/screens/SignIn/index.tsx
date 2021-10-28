@@ -26,10 +26,10 @@ export function SignIn() {
   async function handleSignInWithGoogle() {
     try {
       await signInWithGoogle();
+
     } catch (error) {
       console.log(error);
       Alert.alert('Não foi possível conextar a conta Google');
-      
     }
   }
 
