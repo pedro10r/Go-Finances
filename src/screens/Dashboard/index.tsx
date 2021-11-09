@@ -6,6 +6,7 @@ import { useFocusEffect } from '@react-navigation/core';
 import { HightLightCard } from '../../components/HightLightCard';
 import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
 import { useTheme } from 'styled-components';
+import { useAuth } from '../../hooks/auth';
 
 import {
   Container,
@@ -46,6 +47,7 @@ export function Dashboard() {
   const [highlightData, setHighlightData] = useState<HighlightData>({} as HighlightData);
 
   const theme = useTheme();
+  const { signOut, user } = useAuth();
 
   function getLastTransactionDate(
     collection: DataListProps[],
@@ -156,14 +158,14 @@ export function Dashboard() {
           <Header>
             <UserWrapper>
               <UserInfo>
-                <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/50682093?v=4' }}/>
+                <Photo source={{ uri: user.photo }}/>
 
                 <User>
                   <UserGreeting>Ola,</UserGreeting>
-                  <UserName>Pedro</UserName>
+                  <UserName>{user.name}</UserName>
                 </User>
               </UserInfo>
-              <LogoutButton onPress={() => {}}>
+              <LogoutButton onPress={signOut}>
                 <Icon name="power"/>
               </LogoutButton>
             </UserWrapper>
