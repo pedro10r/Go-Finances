@@ -18,6 +18,8 @@ import { Button } from '../../components/Form/Button';
 import { TransactionTypeButton } from '../../components/Form/TransactionTypeButton';
 import { CategorySelectButton } from '../../components/Form/CategorySelectButton';
 
+import { useAuth } from '../../hooks/auth';
+
 import { CategorySelect } from '../CategorySelect';
 
 import {
@@ -48,6 +50,8 @@ const schema = Yup.object().shape({
 export function Register() {
   const [transactionType, setTransactionType] = useState('');
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+
+  const { user } = useAuth();
 
   const [category, setCategory] = useState({
     key: 'category',
@@ -100,7 +104,7 @@ export function Register() {
     }
 
     try {
-      const dataKey = '@gofinances:transactions';
+      const dataKey = `@gofinances:transactions_user:${user.id}`;
 
       const data = await AsyncStorage.getItem(dataKey);
       const currentData = data ? JSON.parse(data) : [];
