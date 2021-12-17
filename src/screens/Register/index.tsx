@@ -133,7 +133,7 @@ export function Register() {
 
   // useEffect(() => {
   //   async function removeAll() {
-  //     const dataKey = '@gofinances:transactions';
+  //     const dataKey = `@gofinances:transactions_user:${user.id}`;
   //     await AsyncStorage.removeItem(dataKey);
   //   }
 
