@@ -1,14 +1,14 @@
-# Go Finances - Ignite
+## Go Finances - Ignite
 
-## Projeto `React Native` desenvolvido com `Expo`
+### Projeto `React Native` desenvolvido com `Expo`
 
-## Utlizando aplicação
+#### Ultizando aplicação
 Depois de clonar o repo em sua máquina, entre na pasta do projeto e rode `yarn`
 Se estiver no mac, rode também `npx pod-install ios`
 
 Com tudo OK, na pasta do projeto rode `expo start`
 
-### Observação importante: 
+#### Observação importante: 
 #### Como esse é um projeto simples não vou atualizar para novas versões do expo e react.
 Antes de tentar rodar o projeto, certifique-se que não tenha o Expo Go instalado no Emulador. 
 Por que? Pois o expo mantém uma versão mais antiga e não roda na nova versão do Expo Go. 
