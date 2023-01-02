@@ -12,7 +12,7 @@ Com tudo OK, na pasta do projeto rode `expo start`
 #### Como esse é um projeto simples não vou atualizar para novas versões do expo e react.
 Antes de tentar rodar o projeto, certifique-se que não tenha o Expo Go instalado no Emulador. 
 Por que? Pois o expo mantém uma versão mais antiga e não roda na nova versão do Expo Go. 
-Potanto, se tiver o app Expo Go, desinstale e depois rode o projeto, que criará automaticamente o app no Emulador.
+Portanto, se tiver o app Expo Go instalado, desinstale e depois rode o projeto, assim o expo vai instalar automaticamente o Expo Go no Emulador.
 
 
 
